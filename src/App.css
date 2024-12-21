@@ -1,0 +1,63 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, 150px); /* 2 equal rows */
+  gap: 10px;
+  width: 100%;
+  max-width: 600px; /* Limit grid width */
+}
+
+/* Default card styles */
+.card {
+  background-color: lightblue;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+/* Hide cards when not visible */
+.card.hidden {
+  display: none;
+}
+
+/* Expanding cards */
+
+/* Card 1 expands downwards to cover 1, 2, 4, 5 */
+.card-1.expanded {
+  grid-column: 1 / span 2; /* Spans 2 columns */
+  grid-row: 1 / span 2;    /* Expands downwards */
+}
+
+/* Card 2 expands downwards to cover 1, 2, 3 */
+.card-2.expanded {
+  grid-column: 2 / span 2; /* Spans 2 columns */
+  grid-row: 1 / span 2;    /* Expands downwards */
+}
+
+/* Card 3 expands downwards to cover 2, 3, 5, 6 */
+.card-3.expanded {
+  grid-column: 2 / span 2; /* Spans 2 columns */
+  grid-row: 1 / span 2;    /* Expands downwards */
+}
+
+/* Card 4 expands upwards to cover 1, 2, 4, 5 */
+.card-4.expanded {
+  grid-column: 1 / span 2; /* Spans 2 columns */
+  grid-row: 1 / span 2;    /* Expands upwards */
+}
+
+/* Card 5 expands upwards to cover 2, 3, 5, 6 */
+.card-5.expanded {
+  grid-column: 2 / span 2; /* Spans 2 columns */
+  grid-row: 1 / span 2;    /* Expands upwards */
+}
+
+/* Card 6 expands upwards to cover 2, 3, 5, 6 */
+.card-6.expanded {
+  grid-column: 2 / span 2; /* Spans 2 columns */
+  grid-row: 1 / span 2;    /* Expands upwards */
+}
